@@ -42,8 +42,29 @@ class PacMan:
 
     def move(self):
         if self.direction:
-            pass
-        
+            if self.direction == (0, -1):
+                dx, dy = 0, -1
+            elif self.direction == (0, 1):
+                dx, dy = 0, 1
+            elif self.direction == (1, 0):
+                dx, dy = 1, 0
+            elif self.direction == (-1, 0):
+                dx, dy = -1, 0
+
+            new_x = self.x + dx
+            new_y = self.y + dy
+
+            if self.board[new_y][new_x] == 0:
+                self.x, self.y = new_x, new_y
+
+                grid_pos = (self.x, self.y)
+
+                tile_size=[self.size_grid, self.size_grid]
+
+                screen_x, screen_y = grid_to_screen(grid_pos, tile_size)
+
+                self.rect.topleft = (screen_x, screen_y)
+
             # TODO: Extraire la direction de déplacement à partir de l'attribut `self.direction`.
             
             # TODO: Calculer les nouvelles coordonnées X et Y en fonction de la direction

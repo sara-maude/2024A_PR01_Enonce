@@ -19,7 +19,7 @@ class Direction:
 
 
 # Taille des fantômes
-GHOST_SIZE = (45, 45)
+GHOST_SIZE = (40, 40)
 
 # Taille du pacman
 PACMAN_SIZE = (40, 40)
