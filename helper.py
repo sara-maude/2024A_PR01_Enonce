@@ -52,8 +52,8 @@ def create_coins(board):
 
 def create_special_coins(board):
     special_coins = []
-    for j in range(0, 4):
-        special_coins.append(special_coins_pos[j])
+    for i in range(0, 4):
+        special_coins.append(special_coins_pos[i])
     # TODO: Ajouter des coins aux positions spéciales, en utilisant la variable 'special_coins_pos'.
     
     return special_coins
